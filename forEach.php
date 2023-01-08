@@ -8,11 +8,27 @@ include "header.php";
 
         <h1>Estructura de control For Each</h1>
 
-        <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae commodi delectus dicta distinctio ea
-                eaque, eveniet excepturi facere, hic iusto pariatur quibusdam reprehenderit repudiandae unde ut vero
-                voluptate, voluptates!</p>
-        </div>
+        <?php
+        require "form.php";
+        include "model/Persona.php";
+
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+            $personas = array(
+                new Persona($_POST['nombre'], $_POST['edad'], $_POST['fechanacimiento']),
+                new Persona("Pepe", "56", "09-13-1975")
+            );
+
+
+            echo "<h3>GUARDAR LOS DATOS DE UN FORMULARIO EN UN ARRAY Y MOSTRARLOS.</h3>";
+
+            foreach ($personas as $persona) {
+                echo "Nombre: " . $persona->nombre . ", \n";
+                echo "Edad: " . $persona->edad . ", \n";
+                echo "Fecha de Nacimiento: " . $persona->fechanacimiento. "\n", "<br/>";
+            }
+        }
+        ?>
 
 
     </div>
@@ -21,4 +37,4 @@ include "header.php";
 
 </section>
 
-<?php include "footer.php.php";
+<?php include "footer.php";

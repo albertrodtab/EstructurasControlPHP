@@ -7,9 +7,10 @@ include "header.php";
         <h1>Mi primer proyecto de desarrollo de interfaces con PHP</h1>
 
         <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae commodi delectus dicta distinctio ea
-                eaque, eveniet excepturi facere, hic iusto pariatur quibusdam reprehenderit repudiandae unde ut vero
-                voluptate, voluptates!</p>
+            <p>He desarrollado un proyecto con varias páginas que recogen
+            información a partir de un formulario y que por medio de clases y funciones
+            desrrollan diferentes funcionalidades que sirven para explicar cada una
+            de las estructuras de flujo dadas en las clases.</p>
         </div>
 
 

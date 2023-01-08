@@ -8,12 +8,28 @@ include "header.php";
 
         <h1>Estructura de control For</h1>
 
-        <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae commodi delectus dicta distinctio ea
-                eaque, eveniet excepturi facere, hic iusto pariatur quibusdam reprehenderit repudiandae unde ut vero
-                voluptate, voluptates!</p>
-        </div>
+        <?php
+        require "form.php";
+        include "model/Persona.php";
 
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
+            $usuario = new persona($_POST['nombre'], $_POST['edad'], $_POST['fechanacimiento']);
+            $edad = $usuario->calculaedad($_POST['fechanacimiento']);
+            echo $nombre = $usuario->getnombre(), " tiene ".$edad, " años", "<br/>";
+
+            echo "<h3>CUENTA ATRAS DESDE EL VALOR DE TU EDAD</h3>";
+
+        // Bucle for para realizar la cuenta atrás
+        for ($i = $edad; $i >= 0; $i--) {
+            // Mostrar el valor actual de la cuenta atrás
+            echo "$i...\n";
+        }
+
+        echo "¡BOOOOOOM!\n";
+        }
+        ?>
 
     </div>
 

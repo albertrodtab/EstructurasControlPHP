@@ -8,11 +8,28 @@ include "header.php";
 
         <h1>Estructura de control Do While</h1>
 
-        <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae commodi delectus dicta distinctio ea
-                eaque, eveniet excepturi facere, hic iusto pariatur quibusdam reprehenderit repudiandae unde ut vero
-                voluptate, voluptates!</p>
-        </div>
+        <?php
+        require "form.php";
+        include "model/Persona.php";
+
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
+            $usuario = new persona($_POST['nombre'], $_POST['edad'], $_POST['fechanacimiento']);
+            $edad = $usuario->calculaedad($_POST['fechanacimiento']);
+            echo $nombre = $usuario->getnombre(), " tiene ".$edad, " años", "<br/>";
+
+            echo "<h3>CUENTA ATRAS DESDE EL VALOR DE TU EDAD</h3>","<br/>";
+            do {
+                echo "$edad...\n";
+                $edad--;
+            } while ($edad >= 0);
+
+            echo "¡BOOOOOOM!\n";
+        }
+
+
+        ?>
 
 
     </div>

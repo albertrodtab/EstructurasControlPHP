@@ -17,21 +17,29 @@ include "header.php";
         if($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $usuario = new persona($_POST['nombre'], $_POST['edad'], $_POST['fechanacimiento']);
+
+            $edad = $usuario->calculaedad($_POST['fechanacimiento']);
+
+            echo "<h3>¿PUEDES ACCEDER A ESTA PAGÍNA?</h3>", "<br/>";
+
+            if ($edad < 18) {
+                $edadinicial = $edad;
+
+                while ($edadinicial < 18) {
+                    $edadinicial++;
+                    if($edadinicial =18){
+                        $añosfaltan = $edadinicial - $edad;
+                        echo "Eres demasiado joven. Vuelve a intentarlo dentro de " .$añosfaltan, " años.";
+                    }
+
+                }
+                } else{
+                echo "¡Felicidades! Tienes 18 años o más. puedes acceder a esta página", "<br/>";
+                $link = new Link('http://www.marca.com');
+                echo $link->display();
+                }
+
         }
-        $edad = $usuario->calculaedad($_POST['fechanacimiento']);
-
-        echo "<h3>¿PUEDES ACCEDER A ESTA PAGÍNA?</h3>","<br/>";
-
-        while ($edad < 18) {
-            echo "Eres demasiado joven. Vuelve a intentarlo cuando tengas 18 años o más.";
-
-        }
-
-        echo "¡Felicidades! Tienes 18 años o más. puedes acceder a esta página", "<br/>";
-        $link = new Link('http://www.marca.com');
-        echo $link->display();
-
-
         ?>
 
 

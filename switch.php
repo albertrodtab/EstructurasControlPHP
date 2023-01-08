@@ -8,11 +8,30 @@ include "header.php";
 
         <h1>Estructura de control Switch</h1>
 
-        <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae commodi delectus dicta distinctio ea
-                eaque, eveniet excepturi facere, hic iusto pariatur quibusdam reprehenderit repudiandae unde ut vero
-                voluptate, voluptates!</p>
-        </div>
+        <?php
+        include "model/Persona.php";
+        require "form.php";
+
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+
+            $usuario = new persona($_POST['nombre'], $_POST['edad'], $_POST['fechanacimiento']);
+        }
+        $edad = $usuario->calculaedad($_POST['fechanacimiento']);
+
+    echo "<h3>EN QUE GRUPO DE EDAD SE INCLUYE</h3>","<br/>";
+
+        switch ($edad) {
+            case $edad < 18:
+                echo $_POST['nombre'], " eres menor de edad";
+                break;
+            case $edad >= 18 && $edad <= 65:
+                echo $_POST['nombre'], " eres mayor de edad";
+                break;
+            case $edad > 65:
+                echo $_POST['nombre'], " eres un adulto mayor";
+                break;
+        }
+        ?>
 
 
     </div>

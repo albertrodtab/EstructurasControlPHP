@@ -61,6 +61,59 @@ nav li:hover{
     background-color: #543AB7FF;
 }
 
+/* Estilos Formulario */
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin: 10px;
+    justify-content: space-around;
+    height: 400px;
+    background: #a8c0ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+}
+
+.form-input{
+    padding: 10px;
+    width: 250px;
+    margin-right: 15px;
+}
+
+.form-input-area{
+    padding: 10px;
+    width: 300px;
+    height: 250px;
+    margin-right: 15px;
+}
+
+
+.form-seleccion{
+    padding: 10px;
+    width: 275px;
+}
+
+.checkbox{
+    display: flex;
+}
+
+.form-boton{
+    padding: 10px;
+}
+
+.form-boton:hover{
+    cursor: pointer;
+}
+
+
 .body{
     min-height: 100vh;
     padding: 10px;

@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad de aprendizaje</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="../css/estilos.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Noto+Sans+JP:wght@300&family=Raleway:ital,wght@1,200&display=swap"
@@ -29,15 +29,9 @@
         <div>
             <nav>
                 <ul>
-                    <li><a href="index.php">Inicio</a></li>
-                    <li><a href="if.php">If</a></li>
-                    <li><a href="if...Else.php">If...Else</a></li>
-                    <li><a href="elseIf.php">Else If</a></li>
-                    <li><a href="switch.php">Switch</a></li>
-                    <li><a href="while.php">While</a></li>
-                    <li><a href="do...While.php">Do While</a></li>
-                    <li><a href="for.php">For</a></li>
-                    <li><a href="forEach.php">For Each</a></li>
+                    <li><a href="../index.php">Inicio</a></li>
+                    <li><a href="user_login.php">Únete</a></li>
+                    <li><a href="user_contacto.php">Contacto</a></li>
                 </ul>
             </nav>
         </div>

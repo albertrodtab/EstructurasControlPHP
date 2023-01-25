@@ -8,7 +8,7 @@
             <div>
                 <form action="" method="post">
                     <div class="formulario">
-                        <form action="if.php" method="post">
+                        <form action="../view/if.php" method="post">
                             <div class="form">
                                 <input type="text" name="nombre" placeholder="Nombre" class="form-input"><br/>
                                 <input type="int" name="edad" placeholder="Edad" class="form-input"><br/>

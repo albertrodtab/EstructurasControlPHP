@@ -6,11 +6,11 @@ include "header.php";
 
     <div class="body">
 
-        <h1>Estructura de control For</h1>
+        <h1>Estructura de control Do While</h1>
 
         <?php
         require "form.php";
-        include "model/Persona.php";
+        include "../model/persona.php";
 
         if($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -19,17 +19,18 @@ include "header.php";
             $edad = $usuario->calculaedad($_POST['fechanacimiento']);
             echo $nombre = $usuario->getnombre(), " tiene ".$edad, " años", "<br/>";
 
-            echo "<h3>CUENTA ATRAS DESDE EL VALOR DE TU EDAD</h3>";
+            echo "<h3>CUENTA ATRAS DESDE EL VALOR DE TU EDAD</h3>","<br/>";
+            do {
+                echo "$edad...\n";
+                $edad--;
+            } while ($edad >= 0);
 
-        // Bucle for para realizar la cuenta atrás
-        for ($i = $edad; $i >= 0; $i--) {
-            // Mostrar el valor actual de la cuenta atrás
-            echo "$i...\n";
+            echo "¡BOOOOOOM!\n";
         }
 
-        echo "¡BOOOOOOM!\n";
-        }
+
         ?>
+
 
     </div>
 

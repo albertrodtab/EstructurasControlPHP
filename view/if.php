@@ -11,8 +11,8 @@ include "header.php";
 
         <?php
         require "form.php";
-        include "model/Persona.php";
-        include "model/Link.php";
+        include "../model/persona.php";
+        include "../controller/link.php";
         //Con esto evito que me lance un warning cuando el formulario aún no tiene datos.
         if($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -29,7 +29,7 @@ include "header.php";
             if ($edad >= 18) {
                 echo $nombre = $usuario->getnombre(), " es mayor de edad tiene ".$edad, " años", "<br/>";
                 echo $nombre = $usuario->getnombre(), " tiene la edad adecuada para acceder a este sitio.", "<br/>";
-                $link = new Link('http://www.marca.com');
+                $link = new link('http://www.marca.com');
                 echo $link->display();
             }
         }

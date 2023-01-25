@@ -10,7 +10,7 @@ include "header.php";
 
         <?php
         require "form.php";
-        include "model/Persona.php";
+        include "../model/persona.php";
 
         if($_SERVER["REQUEST_METHOD"] == "POST") {
 

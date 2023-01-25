@@ -1,6 +1,6 @@
 <?php
 
-class Link{
+class link{
 
     private $url;
 

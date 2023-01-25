@@ -10,8 +10,8 @@ include "header.php";
 
         <?php
 
-        include "model/Persona.php";
-        include "model/Link.php";
+        include "../model/persona.php";
+        include "../controller/link.php";
         require "form.php";
 
         if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -35,7 +35,7 @@ include "header.php";
                 }
                 } else{
                 echo "¡Felicidades! Tienes 18 años o más. puedes acceder a esta página", "<br/>";
-                $link = new Link('http://www.marca.com');
+                $link = new link('http://www.marca.com');
                 echo $link->display();
                 }
 

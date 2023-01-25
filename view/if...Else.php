@@ -10,8 +10,8 @@ include "header.php";
 
         <?php
 
-        include "model/Persona.php";
-        include "model/Link.php";
+        include "../model/persona.php";
+        include "../controller/link.php";
         require "form.php";
 
 //Con esto evito que me lance un warning cuando el formulario aún no tiene datos.
@@ -30,7 +30,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($edad >= 18) {
         echo $nombre = $usuario->getnombre(), " es mayor de edad tiene ".$edad, " años", "<br/>";
         echo $nombre = $usuario->getnombre(), " tiene la edad adecuada para acceder a este sitio.", "<br/>";
-        $link = new Link('http://www.marca.com');
+        $link = new link('http://www.marca.com');
         echo $link->display();
     } else {
         echo $nombre = $usuario->getnombre(), " no tiene la edad adecuada para acceder a este sitio.";
